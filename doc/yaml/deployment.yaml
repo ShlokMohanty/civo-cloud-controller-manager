@@ -1,21 +1,21 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: apps/v1 #api version 
+kind: Deployment #for deployment purpopse
 metadata:
-  name: nginx-echo-pods
+  name: nginx-echo-pods #
 spec:
-  replicas: 2
-  selector:
+  replicas: 2 #for creating the copies of the pods
+  selector: #     try to find out what is a selector ?
     matchLabels:
-      app: mirror-pod
+      app: mirror-pod #mirroring pods
   template:
     metadata:
       labels:
-        app: mirror-pod
+        app: mirror-pod #mirroring pods 
     spec:
       containers:
       - name: mirror-pod
         image: mendhak/http-https-echo
         ports:
-        - containerPort: 80
-          protocol: TCP
+        - containerPort: 80 #running port 80
+          protocol: TCP #running TCP protocol
        
