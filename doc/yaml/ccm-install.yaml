@@ -1,8 +1,8 @@
-kind: ServiceAccount
-apiVersion: v1
+kind: ServiceAccount #for defining the type of the service 
+apiVersion: v1 #version 
 metadata:
-  name: civo-ccm-sa
-  namespace: kube-system
+  name: civo-ccm-sa #
+  namespace: kube-system #kube system  search for namespaces
 ---
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
