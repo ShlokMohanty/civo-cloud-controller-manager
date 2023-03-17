@@ -1,12 +1,13 @@
-apiVersion: v1
-kind: Service
+apiVersion: v1 #for typing the version of the api used
+kind: Service #service 
 metadata:
-  name: test-service
+  name: test-service #what is the purpose of the service  for testing 
   annotations:
-    kubernetes.civo.com/loadbalancer-algorithm: least_connections
+    kubernetes.civo.com/loadbalancer-algorithm: least_connections #load balancer algorithm used for routing purposes of the traffic 
 spec:
   selector:
-    app: mirror-pod
-  type: LoadBalancer
+    app: mirror-pod #mirroring of a pod 
+  type: LoadBalancer #
   ports:
-    - port: 80
+    - port: 80 #will ping the port 80 for the protocol HTTP 
+    
